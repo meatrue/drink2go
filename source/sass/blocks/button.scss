@@ -1,0 +1,88 @@
+.button {
+  @include button-reset;
+
+  box-sizing: border-box;
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $base-white-color;
+  background-color: $base-primary-color;
+  border-radius: 4px;
+
+  &--product-card-buy {
+    position: relative;
+    padding-left: 46px;
+    font-size: 14px;
+    line-height: 1.4;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 20px;
+      margin: auto 0;
+      width: 20px;
+      height: 16px;
+      content: "";
+      background-image: url("../../img/icons/button-cart.svg");
+    }
+  }
+
+  &--filter,
+  &--reset-filter {
+    min-width: 160px;
+    font-size: 13px;
+    line-height: 1.8;
+    padding: 10px 3px;
+
+    @media (min-width: $tablet-width) {
+      min-width: 148px;
+      padding: 8px 3px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  }
+
+  &--reset-filter {
+    color: $base-primary-color;
+    background-color: $base-white-color;
+
+    &:hover,
+    &:focus {
+      color: $base-white-color;
+    }
+  }
+
+  &--reset-filter.button--disabled {
+    color: $base-white-color;
+    background-color: $light-grey-color;
+    cursor: default;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $light-grey-color;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $primary-lighter-color;
+  }
+
+  &:active {
+    background-color: $primary-darker-color;
+  }
+
+  &--disabled {
+    background-color: $base-grey-color;
+    cursor: default;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $base-grey-color;
+    }
+  }
+}

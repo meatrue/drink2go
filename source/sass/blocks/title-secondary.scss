@@ -1,0 +1,10 @@
+.title-secondary {
+  font-size: $h2-font-size-mobile;
+  line-height: $h2-line-height-mobile;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: $h2-font-size-tablet;
+    line-height: $h2-line-height-tablet;
+  }
+}

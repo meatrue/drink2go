@@ -1,0 +1,39 @@
+
+
+@mixin list-reset {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+@mixin button-reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+}
+
+@mixin for-nav-links {
+  font-size: $badge-font-size;
+  line-height: $badge-line-height;
+  color: $base-black-color;
+  text-decoration: none;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

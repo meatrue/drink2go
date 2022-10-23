@@ -1,0 +1,83 @@
+// Размеры
+$mobile-width: 320px;
+$mobile-width-max: 767px;
+$tablet-width: 768px;
+$tablet-width-max: 1439px;
+$desktop-width: 1440px;
+
+
+// Отступы
+$page-padding-mobile: 20px;
+$page-padding-desktop: 40px;
+$page-indent: 20px;
+
+
+// Цвета
+$base-white-color: #ffffff;
+$base-grey-color: #bdbdbd;
+$base-black-color: #333333;
+$base-primary-color: #7859cf;
+$base-secondary-color: #f0ebff;
+
+$primary-opacity-color: rgba(120, 89, 207, 0.25);
+$primary-lighter-color: #9070ec;
+$primary-darker-color: #593cac;
+$light-grey-color: #e2e2e2;
+
+$lightest-grey-bg-color: #f8f8f8;
+$flat-bg-color: #f3ebe1;
+$latte-bg-color: #eae6fc;
+$espresso-bg-color: #e5e6e8;
+
+$primary-opacity: 0.25;
+
+
+// Шрифт - Семейство
+$font-family: "Montserrat", "Arial", sans-serif;
+
+
+// Размер шрифта - Слайдер, заголовок
+$promo-title-font-size-mobile: 36px;
+$promo-title-line-height-mobile: 1.3;
+$promo-title-font-size-tablet: 56px;
+$promo-title-line-height-tablet: 1.4;
+$promo-title-font-size-desktop: 56px;
+$promo-title-line-height-desktop: 1.4;
+
+// Размер шрифта - Слайдер, описание
+$promo-description-font-size-mobile: 14px;
+$promo-description-line-height-mobile: 1.4;
+$promo-description-font-size-tablet: 20px;
+$promo-description-line-height-tablet: 1.6;
+$promo-description-font-size-desktop: 20px;
+$promo-description-line-height-desktop: 1.6;
+
+// Размер шрифта - основной текст
+$main-font-size: 14px;
+$main-line-height: 1.4;
+
+// Размер шрифта - h2
+$h2-font-size-mobile: 24px;
+$h2-line-height-mobile: 1.5;
+$h2-font-size-tablet: 42px;
+$h2-line-height-tablet: 1.5;
+$h2-font-size-desktop: 42px;
+$h2-line-height-desktop: 1.5;
+
+// Размер шрифта - h3
+$h3-font-size-mobile: 18px;
+$h3-line-height-mobile: 1.8;
+$h3-font-size-tablet: 24px;
+$h3-line-height-tablet: 1.5;
+$h3-font-size-desktop: 24px;
+$h3-line-height-desktop: 1.5;
+
+// Размер шрифта - другие размеры
+$h4-font-size: 14px;
+$h4-line-height: 1.4;
+$badge-font-size: 12px;
+$badge-line-height: 1.3;
+$label-font-size: 16px;
+$label-line-height: 1.5;
+$price-font-size: 20px;
+$price-line-height: 1.3;

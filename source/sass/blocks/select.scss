@@ -1,0 +1,97 @@
+.select {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: $label-font-size;
+  line-height: $label-line-height;
+  text-transform: lowercase;
+}
+
+.select__selected-field {
+  position: relative;
+  overflow: hidden;
+  padding: 4px 30px 4px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: $base-primary-color;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    z-index: 2;
+    top: -2px;
+    right: 10px;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    margin: auto 0;
+    content: "";
+    background-image: url("../../img/icons/pagination-arrow-left.svg");
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+    pointer-events: none;
+  }
+
+  &--opened::after {
+    transform: translateY(4px) rotate(90deg);
+  }
+
+  &--opened + .select__list {
+    visibility: visible;
+  }
+
+  &:hover {
+    background-color: $base-secondary-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  p {
+    overflow: hidden;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.select__list {
+  @include list-reset;
+
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  visibility: hidden;
+  overflow: hidden;
+  background-color: $base-white-color;
+  border-radius: 4px;
+  transform: translateY(100%);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.select__item {
+  padding: 8px 20px;
+  text-transform: lowercase;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $base-secondary-color;
+  }
+
+  &:hover:not(.select__item--current),
+  &:focus:not(.select__item--current) {
+    background-color: $base-secondary-color;
+    outline: none;
+  }
+
+  &--current {
+    color: $base-white-color;
+    background-color: $base-primary-color;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

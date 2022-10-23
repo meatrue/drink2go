@@ -1,0 +1,127 @@
+.pagination {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: $page-indent;
+  justify-content: center;
+  align-items: center;
+
+  &--begin .pagination__link--back {
+    visibility: hidden;
+  }
+
+  &--end .pagination__link--forward {
+    visibility: hidden;
+  }
+
+  &--begin::before,
+  &--end::after {
+    width: 40px;
+    height: 40px;
+    content: "";
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-gap: 0;
+
+    &--begin::before {
+      width: 91px;
+    }
+
+    &--end::after {
+      width: 104px;
+    }
+  }
+}
+
+.pagination__list {
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: $page-indent;
+  justify-content: center;
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+  min-width: 40px;
+  padding: 8px;
+  font-size: $label-font-size;
+  line-height: $label-line-height;
+  color: $base-primary-color;
+  text-decoration: none;
+  background-color: $base-white-color;
+  border-radius: 4px;
+
+  &--current {
+    color: $base-black-color;
+    font-weight: 600;
+    background-color: $lightest-grey-bg-color;
+  }
+
+  &--arrow {
+    padding: 15px;
+  }
+
+  &--forward .pagination__link-icon {
+    transform: rotate(180deg);
+  }
+
+  &:hover:not(.pagination__link--current:hover, .pagination__link--disabled:hover),
+  &:focus:not(.pagination__link--current:focus, .pagination__link--disabled:focus) {
+    color: $base-white-color;
+    background-color: $primary-lighter-color;
+    outline: none;
+  }
+
+  &:active:not(.pagination__link--current:active, .pagination__link--disabled:active) {
+    color: $base-white-color;
+    background-color: $primary-darker-color;
+    outline: none;
+  }
+
+  &--arrow:hover .pagination__link-icon,
+  &--arrow:focus .pagination__link-icon,
+  &--arrow:active .pagination__link-icon {
+    fill: $base-white-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--arrow .pagination__link-icon {
+      display: none;
+    }
+
+    &--back {
+      padding: 8px 43px 8px 52px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &--forward {
+      padding: 8px 47px 8px 44px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &--first-number {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &--last-number {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.pagination__link-label {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}

@@ -1,0 +1,10 @@
+.title-tertiary {
+  font-size: $h3-font-size-mobile;
+  line-height: $h3-line-height-mobile;
+  font-weight: 700;
+
+  @media (min-width: $tablet-width) {
+    font-size: $h3-font-size-tablet;
+    line-height: $h3-line-height-tablet;
+  }
+}
