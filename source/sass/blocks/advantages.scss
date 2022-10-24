@@ -82,19 +82,19 @@
   }
 
   &--speed::before {
-    background-image: url("../../img/icons/advantage-speed.svg");
+    background-image: url("../img/icons/advantage-speed.svg");
   }
 
   &--convenience::before {
-    background-image: url("../../img/icons/advantage-convenience.svg");
+    background-image: url("../img/icons/advantage-convenience.svg");
   }
 
   &--cheerfulness::before {
-    background-image: url("../../img/icons/advantage-cheerfulness.svg");
+    background-image: url("../img/icons/advantage-cheerfulness.svg");
   }
 
   &--ecology::before {
-    background-image: url("../../img/icons/advantage-ecology.svg");
+    background-image: url("../img/icons/advantage-ecology.svg");
   }
 
   @media (min-width: $tablet-width) {
