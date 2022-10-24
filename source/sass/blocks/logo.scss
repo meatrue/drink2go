@@ -12,28 +12,28 @@
 .logo--header .logo__image {
   width: 32px;
   height: 36px;
-  background-image: url("../../img/logos/logo-phone.svg");
+  background-image: url("../img/logos/logo-phone.svg");
   background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
     width: 82px;
-    background-image: url("../../img/logos/logo-tablet.svg");
+    background-image: url("../img/logos/logo-tablet.svg");
   }
 
   @media (min-width: $desktop-width) {
     width: 170px;
-    background-image: url("../../img/logos/logo-desktop.svg");
+    background-image: url("../img/logos/logo-desktop.svg");
   }
 }
 
 .logo--footer .logo__image {
   width: 82px;
   height: 36px;
-  background-image: url("../../img/logos/logo-tablet.svg");
+  background-image: url("../img/logos/logo-tablet.svg");
 
   @media (min-width: $tablet-width) {
     width: 170px;
-    background-image: url("../../img/logos/logo-desktop.svg");
+    background-image: url("../img/logos/logo-desktop.svg");
   }
 }
 
